@@ -1,9 +1,17 @@
+.logo-container,
+.container-nav ul a,
+.agendar-button {
+  transition: all 0.3s ease;
+}
+
 .container-header {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 
 .logo-container {
@@ -14,21 +22,24 @@
 
 .logo-container:hover {
   cursor: pointer;
+  transform: scale(1.05); 
 }
+
 
 .logo-texto-container {
   text-align: left;
   margin-left: 5px;
+}
 
-  span {
-    margin: 0;
-    font-size: 25px;
-    font-weight: bold;
-  }
-  p {
-    margin-top: 3px;
-    font-size: 15px;
-  }
+.logo-texto-container span {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo-texto-container p {
+  margin-top: 3px;
+  font-size: 15px;
 }
 
 .icon-box {
@@ -58,6 +69,8 @@
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .container-nav ul a {
@@ -65,9 +78,12 @@
   color: black;
   font-weight: bold;
 }
+
 .container-nav ul a:hover {
-   color: #778a5c; 
+  color: #778a5c;
+  transform: scale(1.1);
 }
+
 
 .agendar-button {
   background: linear-gradient(to bottom right, #8b4513, #a0522d);
@@ -77,11 +93,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .agendar-button:hover {
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(255, 165, 0, 0.7);
 }
 
@@ -93,5 +108,41 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .container-header {
+    flex-direction: column;
+    gap: 20px; 
+  }
+
+  .container-nav {
+    width: 100%; 
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-header {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .logo-texto-container span {
+    font-size: 22px; 
+  }
+
+  .logo-texto-container p {
+    font-size: 13px; 
+  }
+
+  .container-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+  }
+
+  .container-nav ul a {
+    font-size: 14px;
+  }
 }
