@@ -1,0 +1,138 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1a1c27;
+}
+
+.formas-pagamento-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.forma-pagamento-item {
+  background-color: #e9e4bb; /* bege claro da paleta */
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  max-width: 90%;
+  text-align: center;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.forma-pagamento-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.forma-pagamento-item .icone-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 26px;
+  margin: 0 auto 15px auto;
+  background-color: #bfd4b7; /* verde suave padrão */
+  color: #1a1c27; /* texto escuro padrão */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icone-verde {
+  background-color: #bfd4b7;
+  color: #1a1c27;
+}
+
+.icone-marrom {
+  background-color: #5c4432;
+  color: #ffffff;
+}
+
+.icone-azul {
+  background-color: #1a1c27;
+  color: #bfd4b7;
+}
+
+.forma-pagamento-item p:first-of-type {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1a1c27;
+}
+
+.forma-pagamento-item p:last-of-type {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.descricao-container {
+  text-align: center;
+  padding: 25px 15px 0;
+  font-size: 16px;
+  color: #1a1c27;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .formas-pagamento-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forma-pagamento-item {
+    width: 90%;
+  }
+
+  .descricao-container {
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  .title-container h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-container h2 {
+    font-size: 22px;
+  }
+
+  .forma-pagamento-item p:first-of-type {
+    font-size: 16px;
+  }
+
+  .forma-pagamento-item p:last-of-type {
+    font-size: 13px;
+  }
+
+  .descricao-container {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .forma-pagamento-item {
+    padding: 25px 15px;
+  }
+}
