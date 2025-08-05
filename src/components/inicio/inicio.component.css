@@ -1,58 +1,82 @@
 .inicio-container {
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-padding: 80px 20px;
-background-color: #f7f7f2; 
-box-sizing: border-box;
-background-image: url('https://ead.graup.com.br/images/courses/marcenaria.jpg?=1714684306'); 
-background-size: cover;
-background-position: center; 
-background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f7f7f2;
+  box-sizing: border-box;
+  background-image: url('https://oficina44.com.br/wp-content/uploads/2024/10/10-dificuldades-do-marceneiro-inciante.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  min-height: 100vh;
+}
+
+.inicio-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+.inicio-container .conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .informacao-container {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #e0e0d8;
+  background-color: #bebe93;
   padding: 8px 15px;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 
 .informacao-container .fa-star {
-  color: #ffc107; 
+  color: #ffc107;
 }
 
 .informacao-container p {
   margin: 0;
   font-size: 14px;
   font-weight: 500;
-  color: #444;
+  color: #222;
 }
 
-/* Título e subtítulo principal */
 .titulo-container h1 {
   font-size: 48px;
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
   margin: 0;
   max-width: 800px;
-  
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .titulo-container p {
   font-size: 18px;
-  color: #555;
+  color: #ffffff;
   max-width: 600px;
   margin-top: 15px;
   line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Contêiner dos botões */
 .buttons-container {
   margin-top: 40px;
   display: flex;
@@ -72,7 +96,7 @@ background-repeat: no-repeat;
 }
 
 .buttons-container button:first-child {
-  background-color: #8b4513; 
+  background-color: #8b4513;
   color: white;
 }
 
@@ -118,24 +142,35 @@ background-repeat: no-repeat;
 
 .caracteristicas-item p:last-child {
   font-size: 16px;
-  color: #555;
+  color: #eee;
   margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 768px) {
-  #inicio.container {
+  .inicio-container {
     padding: 60px 15px;
   }
 
   .titulo-container h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .titulo-container p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons-container button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .caracteristicas-container {
     flex-direction: column;
     align-items: center;
   }
