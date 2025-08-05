@@ -1,0 +1,261 @@
+/* Container principal do rodapé */
+.footer-container {
+  background-color: #f7f7f2; /* Tom de bege claro para o fundo */
+  color: #2c3e50; /* Tom de marrom escuro para o texto principal */
+  padding: 60px 20px 20px;
+  box-sizing: border-box;
+}
+
+/* Seção superior - Informações principais */
+.top-section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #d4d2c8; /* Linha divisória sutil */
+  padding-bottom: 40px;
+}
+
+/* Seções individuais dentro do top-section */
+.top-section-container .sobre,
+.top-section-container .links,
+.top-section-container .servicos,
+.top-section-container .contato {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Estilo do logo no rodapé */
+.sobre .logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sobre .logo-container .icon-box {
+  background: linear-gradient(to bottom right, #8b4513, #a0522d);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.sobre .logo-container .icon-box .icon {
+  font-size: 20px;
+  color: white;
+}
+
+.sobre .logo-container .logo-texto-container {
+  margin-left: 10px;
+}
+
+.sobre .logo-container .logo-texto-container span {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.sobre .logo-container .logo-texto-container p {
+  font-size: 12px;
+  margin-top: 2px;
+  color: #555;
+}
+
+.sobre p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Links de redes sociais */
+.sobre ol {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sobre ol a {
+  color: #2c3e50;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.sobre ol a:hover {
+  color: #8b4513; /* Tom de marrom mais escuro no hover */
+}
+
+/* Títulos das seções de links */
+.top-section-container p,
+.top-section-container ul,
+.top-section-container ol {
+  margin: 0;
+  padding: 0;
+}
+
+.top-section-container > div > p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Estilo para links rápidos e serviços */
+.links ol,
+.servicos ul {
+  list-style: none;
+}
+
+.links ol a,
+.servicos li {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.links ol a:hover,
+.servicos li:hover {
+  color: #a0522d;
+}
+
+/* Seção de contato */
+.contato-item {
+  margin-bottom: 15px;
+}
+
+.contato-linha {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.contato-linha i {
+  color: #a0522d;
+  margin-right: 10px;
+}
+
+.contato-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Seção do meio - Call-to-action */
+.middle-section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.middle-section-container span {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  color: #2c3e50;
+}
+
+.middle-section-container p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.middle-section-container a {
+  background: #a0522d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.middle-section-container a:hover {
+  background: #8b4513;
+}
+
+/* Seção inferior - Direitos autorais */
+.bottom-section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #777;
+  padding-top: 20px;
+  border-top: 1px solid #d4d2c8;
+}
+
+.bottom-section-container a {
+  color: #777;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.bottom-section-container a:hover {
+  color: #a0522d;
+}
+
+/* ------------------- */
+/* Responsividade do Rodapé */
+/* ------------------- */
+@media (max-width: 768px) {
+  .top-section-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-section-container .sobre,
+  .top-section-container .links,
+  .top-section-container .servicos,
+  .top-section-container .contato {
+    min-width: 100%;
+  }
+
+  .bottom-section-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .bottom-section-container div:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .bottom-section-container a {
+      margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 40px 15px 15px;
+  }
+
+  .middle-section-container span {
+    font-size: 20px;
+  }
+
+  .middle-section-container p {
+    font-size: 14px;
+  }
+}
