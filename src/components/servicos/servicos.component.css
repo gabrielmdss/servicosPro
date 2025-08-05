@@ -1,0 +1,208 @@
+/* Container principal da seção */
+#servicos.container {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #f7f7f2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Título e subtítulo da seção */
+.title-container {
+  text-align: center;
+  max-width: 800px;
+}
+
+.title-container h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #8b4513;
+  margin-bottom: 10px;
+}
+
+.title-container p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Container que agrupa todos os cards */
+.servicos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card individual do serviço */
+.servico-item {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 22.5px); 
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Parte superior com plano e valor */
+.servico-item .top {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.servico-item .top span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #8b4513;
+  background-color: #f0e5d8;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.servico-item .top p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Título e descrição do item */
+.item-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.icone-box {
+  font-size: 28px;
+  color: #8b4513;
+  margin-bottom: 10px;
+}
+
+.item-title p:first-of-type {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.item-title p:last-of-type {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Imagem */
+.img-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Lista de características */
+.servico-informacoes {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.servico-informacoes ol {
+  padding-left: 20px;
+  color: #444;
+  font-size: 14px;
+}
+
+.servico-informacoes li {
+  margin-bottom: 6px;
+}
+
+/* Botão */
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  padding: 12px 25px;
+  border-radius: 8px;
+  background-color: #8b4513;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #a0522d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Responsivo para tablets */
+@media (max-width: 992px) {
+  .servico-item {
+    width: calc(33.333% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  #servicos.container {
+    padding: 60px 15px;
+  }
+
+  .title-container h1 {
+    font-size: 32px;
+  }
+
+  .title-container p {
+    font-size: 16px;
+  }
+
+  .servico-item {
+    width: calc(50% - 15px); 
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .title-container h1 {
+    font-size: 26px;
+  }
+
+  .item-title p:first-of-type {
+    font-size: 16px;
+  }
+
+  .item-title p:last-of-type {
+    font-size: 13px;
+  }
+
+  .servico-informacoes ol {
+    font-size: 13px;
+  }
+
+  .button-container button {
+    font-size: 14px;
+  }
+
+  .servico-item {
+    width: 100%; 
+  }
+}
