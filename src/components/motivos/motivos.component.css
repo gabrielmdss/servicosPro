@@ -1,0 +1,111 @@
+.motivos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #1a1c27;
+}
+
+.motivos-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #8b4513;
+}
+
+.motivos-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.motivo-item {
+  background-color: #f7f7f2;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  max-width: 90%;
+  text-align: center;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+}
+
+.motivo-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.icon-motivo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #7c895d;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.motivo-title p {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #5c4432;
+
+  .motivo-legenda p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .motivos-lista {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .motivo-item {
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .motivos-title h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .motivos-title h1 {
+      font-size: 22px;
+    }
+
+    .motivo-title p {
+      font-size: 18px;
+    }
+
+    .motivo-legenda p {
+      font-size: 13px;
+    }
+
+    .icon-motivo-circle {
+      width: 50px;
+      height: 50px;
+      font-size: 22px;
+    }
+  }
+}
