@@ -76,7 +76,6 @@
   line-height: 1.5;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
-
 .buttons-container {
   margin-top: 40px;
   display: flex;
@@ -85,7 +84,7 @@
   justify-content: center;
 }
 
-.buttons-container button {
+.buttons-container a {
   padding: 15px 30px;
   border-radius: 8px;
   font-weight: bold;
@@ -93,26 +92,31 @@
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.buttons-container button:first-child {
+.buttons-container a.btn-primary {
   background-color: #8b4513;
   color: white;
 }
 
-.buttons-container button:first-child:hover {
+.buttons-container a.btn-primary:hover {
   background-color: #a0522d;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.buttons-container button:last-child {
+.buttons-container a.btn-secondary {
   background-color: transparent;
   color: #8b4513;
   border-color: #8b4513;
+  border-style: solid;
 }
 
-.buttons-container button:last-child:hover {
+.buttons-container a.btn-secondary:hover {
   background-color: #8b4513;
   color: white;
   transform: translateY(-2px);
